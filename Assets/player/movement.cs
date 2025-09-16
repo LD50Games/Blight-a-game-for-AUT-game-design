@@ -14,6 +14,7 @@ public class movement : MonoBehaviour
     private Vector3 _movementVector;
     public Animator animator;
     float rotationX = 0;
+    bool attacking = false;
 
     public bool canMove = true;
     public bool canLook = true;
@@ -33,16 +34,17 @@ public class movement : MonoBehaviour
 
         if (canLook == true)
         {            //Rotation
+            animator.SetFloat("AttackHeight",rotationX);
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
 
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && attacking == false)
         {
             animator.SetTrigger("MidSlash");
-            StartCoroutine(attack(1f));
+            StartCoroutine(attack(1.8f));
         }
     }
     public void BeStill()
@@ -53,9 +55,11 @@ public class movement : MonoBehaviour
     }
     IEnumerator attack(float seconds)
     {
+        attacking = true;
         canMove = false;
         yield return new WaitForSeconds(seconds);
         canMove = true;
+        attacking = false;
     }
     private void FixedUpdate()
     {
