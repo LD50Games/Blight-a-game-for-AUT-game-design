@@ -28,11 +28,13 @@ public class movement : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("Speed", rb.linearVelocity.magnitude * Input.GetAxis("Vertical")); //sets the animator to negitive if s is pressed
+        animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"),rb.linearVelocity.magnitude * Input.GetAxis("Vertical"), Time.deltaTime * 2f)); //sets the animator to negitive if s is pressed
 
+        if (Input.GetKeyDown(KeyCode.A)|| Input.GetKeyDown(KeyCode.D)) {
+            animator.SetFloat("Turn", rb.linearVelocity.magnitude * Input.GetAxis("Horizontal")*4f);//I didn't record a walk to the side animation but this is close enough
+                                                                                                 }
+            animator.SetFloat("Turn", Mathf.Lerp(animator.GetFloat("Turn"), Input.GetAxis("Mouse X"), Time.deltaTime * 2f)); //Ok so this line of code sets the animator's turn float to a lerp between the the animators turn float and the mouse x input in order to make the characters feet do a tiny shuffle while turning.
         
-        animator.SetFloat("Turn", Mathf.Lerp(animator.GetFloat("Turn"), Input.GetAxis("Mouse X"), Time.deltaTime * 2f)); //Ok so this line of code sets the animator's turn float to a lerp between the the animators turn float and the mouse x input in order to make the characters feet do a tiny shuffle while turning.
-
 
         if (canLook == true)
         {            //Rotation
