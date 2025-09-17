@@ -28,9 +28,8 @@ public class movement : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("Speed", rb.linearVelocity.magnitude / 4f + 0.05f);
-
-
+        animator.SetFloat("Speed", rb.linearVelocity.magnitude * Input.GetAxis("Vertical")); //sets the animator to negitive if s is pressed
+        animator.SetFloat("Turn", Input.GetAxis("Mouse X"));
 
         if (canLook == true)
         {            //Rotation
@@ -39,7 +38,7 @@ public class movement : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-
+            
         }
         if (Input.GetKeyDown(KeyCode.Q) && attacking == false)
         {
