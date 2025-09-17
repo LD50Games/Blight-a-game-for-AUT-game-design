@@ -78,7 +78,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blend Tree
+  m_Name: Poke
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -226,7 +226,7 @@ BlendTree:
     m_Motion: {fileID: 5830040508204914451, guid: f1be6f2d946458d43ac30e5d39c99d3f, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: 1.5
     m_CycleOffset: 0
     m_DirectBlendParameter: Speed
     m_Mirror: 0
