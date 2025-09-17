@@ -29,7 +29,10 @@ public class movement : MonoBehaviour
     void Update()
     {
         animator.SetFloat("Speed", rb.linearVelocity.magnitude * Input.GetAxis("Vertical")); //sets the animator to negitive if s is pressed
-        animator.SetFloat("Turn", Input.GetAxis("Mouse X"));
+
+        
+        animator.SetFloat("Turn", Mathf.Lerp(animator.GetFloat("Turn"), Input.GetAxis("Mouse X"), Time.deltaTime * 2f)); //Ok so this line of code sets the animator's turn float to a lerp between the the animators turn float and the mouse x input in order to make the characters feet do a tiny shuffle while turning.
+
 
         if (canLook == true)
         {            //Rotation
