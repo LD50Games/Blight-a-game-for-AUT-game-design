@@ -19,6 +19,8 @@ public class movement : MonoBehaviour
     public bool canMove = true;
     public bool canLook = true;
 
+    public Transform SwordTip;
+    public Transform SwordEdge;
 
     void Start()
     {
