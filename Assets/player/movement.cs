@@ -34,22 +34,23 @@ public class movement : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"),rb.linearVelocity.magnitude * Input.GetAxis("Vertical"), Time.deltaTime * 2f)); //sets the animator to negitive if s is pressed
+        animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"), rb.linearVelocity.magnitude * Input.GetAxis("Vertical"), Time.deltaTime * 2f)); //sets the animator to negitive if s is pressed
 
-        if (Input.GetKeyDown(KeyCode.A)|| Input.GetKeyDown(KeyCode.D)) {
-            animator.SetFloat("Turn", rb.linearVelocity.magnitude * Input.GetAxis("Horizontal")*4f);//I didn't record a walk to the side animation but this is close enough
-                                                                                                 }
-            animator.SetFloat("Turn", Mathf.Lerp(animator.GetFloat("Turn"), Input.GetAxis("Mouse X"), Time.deltaTime * 2f)); //Ok so this line of code sets the animator's turn float to a lerp between the the animators turn float and the mouse x input in order to make the characters feet do a tiny shuffle while turning.
-        
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        {
+            animator.SetFloat("Turn", rb.linearVelocity.magnitude * Input.GetAxis("Horizontal") * 4f);//I didn't record a walk to the side animation but this is close enough
+        }
+        animator.SetFloat("Turn", Mathf.Lerp(animator.GetFloat("Turn"), Input.GetAxis("Mouse X"), Time.deltaTime * 2f)); //Ok so this line of code sets the animator's turn float to a lerp between the the animators turn float and the mouse x input in order to make the characters feet do a tiny shuffle while turning.
+
 
         if (canLook == true)
         {            //Rotation
-            animator.SetFloat("AttackHeight",rotationX);
+            animator.SetFloat("AttackHeight", rotationX);
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-            
+
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && attacking == false && canLook == true)
         {
@@ -68,12 +69,18 @@ public class movement : MonoBehaviour
                 hit.collider.gameObject.SendMessage("interact");
                 npc = hit.collider.gameObject;
             }
-            if (canLook == false) 
+            if (canLook == false)
             {
                 npc.SendMessage("next");
             }
         }
-
+        if (Input.GetKeyDown(KeyCode.Q) && attacking == false)
+        {
+            if (canLook == false)
+            {
+                npc.SendMessage("qOption");
+            }
+        }
     }
     public void BeStill()
     {
@@ -84,6 +91,14 @@ public class movement : MonoBehaviour
     {
         canLook = true;
         canMove = true;
+    }
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    public void Play()
+    {
+        Time.timeScale = 1;
     }
     IEnumerator attack(float seconds) //the more contact made with enemy the more damage that will be done
     {
