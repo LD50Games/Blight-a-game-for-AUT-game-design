@@ -1,5 +1,7 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.UIElements;
+using static UnityEngine.UI.Image;
 
 
 public class movement : MonoBehaviour
@@ -21,7 +23,9 @@ public class movement : MonoBehaviour
 
     public Transform SwordTip;
     public Transform SwordEdge;
-
+    public LayerMask enemies;
+    public LayerMask interactable;
+    GameObject npc;
     void Start()
     {
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
@@ -47,30 +51,65 @@ public class movement : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
             
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0) && attacking == false)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attacking == false && canLook == true)
         {
             animator.SetTrigger("MidSlash");
-            StartCoroutine(attack(1.8f));
+            StartCoroutine(attack(1.6f));
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1) && attacking == false)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && attacking == false && canLook == true)
         {
             animator.SetTrigger("Poke");
-            StartCoroutine(attack(1.7f));
+            StartCoroutine(attack(1.4f));
         }
+        if (Input.GetKeyDown(KeyCode.E) && attacking == false)
+        {
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 6f, interactable) && canLook == true)
+            {
+                hit.collider.gameObject.SendMessage("interact");
+                npc = hit.collider.gameObject;
+            }
+            if (canLook == false) 
+            {
+                npc.SendMessage("next");
+            }
+        }
+
     }
     public void BeStill()
     {
         canLook = false;
-        canMove = false;
-        animator.enabled = false;
+        canMove = false;  
     }
-    IEnumerator attack(float seconds)
+    public void EnableMovement()
+    {
+        canLook = true;
+        canMove = true;
+    }
+    IEnumerator attack(float seconds) //the more contact made with enemy the more damage that will be done
     {
         attacking = true;
         canMove = false;
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(seconds*0.2f);
+        CollisionCheck(SwordTip);
+        CollisionCheck(SwordEdge);
+        yield return new WaitForSeconds(seconds *0.2f);
+        CollisionCheck(SwordTip);
+        CollisionCheck(SwordEdge);
+        yield return new WaitForSeconds(seconds * 0.1f);
+        CollisionCheck(SwordTip);
+        CollisionCheck(SwordEdge);
+        yield return new WaitForSeconds(seconds *0.1f);
         canMove = true;
         attacking = false;
+    }
+    public void CollisionCheck(Transform orgin_) 
+    {
+        Collider[] hits = Physics.OverlapSphere(orgin_.position, 0.25f, enemies);
+
+        foreach (Collider hit in hits)
+            {
+            hit.SendMessage("TakeDamage",1);
+            }
     }
     private void FixedUpdate()
     {

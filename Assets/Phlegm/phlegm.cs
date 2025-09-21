@@ -34,7 +34,7 @@ public class phlegm : MonoBehaviour
         
        
         animator.SetFloat("walking", agent.velocity.sqrMagnitude);
-        print(agent.velocity.sqrMagnitude);
+        
         agent.SetDestination(agent_target.transform.position);
 
     }
