@@ -1,11 +1,16 @@
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 using static dialoge;
 
 public class settings : MonoBehaviour
 {
+    public TextMeshProUGUI dropdown;
     public Camera PlayerCamera;
     public List<Material> TesalatedMaterails = new List<Material>();
     public Volume volume;
@@ -21,6 +26,15 @@ public class settings : MonoBehaviour
     void Start()
     {
         load_settings();
+    }
+    public void UpdateValues(int val)
+    {
+        VisualFedality = val;
+    }
+    public void UpdateFrameRate(int val)
+    {
+        TargetFps = (val + 1) * 30;
+        print(TargetFps);
     }
     public void load_settings()
     {
@@ -40,17 +54,17 @@ public class settings : MonoBehaviour
         else if (VisualFedality == 2) //Visual fedality level 2 only ambeint occlusion is ray traced 
         {
             volume.profile = VisualFedalityLevel2;
-            Ajustments(90, 4);
+            Ajustments(90, 6);
         }
         else if (VisualFedality == 3) //Visual fedality level 3 reflections and AO are fully ray traced
         {
             volume.profile = VisualFedalityLevel3;
-            Ajustments(90, 4);
+            Ajustments(90, 8);
         }
         else if (VisualFedality == 4) //Visual fedality level 4 reflections and AO are fully ray traced at a higher quality 
         {
             volume.profile = VisualFedalityLevel4;
-            Ajustments(120, 8);
+            Ajustments(120, 12);
         }
     }
     public void Ajustments(int CameraDistance,int tesalation)

@@ -33,7 +33,7 @@ public class DialogeClusters
 
     public void interact()
     {
-        player.SendMessage("BeStill");
+        player.SendMessage("BeStill",true);
         DialogeNumber = -1;
         text.enabled = true;
         next();
@@ -83,7 +83,7 @@ public class DialogeClusters
     public void end()
     {
         DialogeNumber = 0;
-        player.SendMessage("EnableMovement");
+        player.SendMessage("BeStill",false);
         text.enabled = false;
     }
     public void qOption()

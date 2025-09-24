@@ -26,10 +26,10 @@ public class movement : MonoBehaviour
     public LayerMask enemies;
     public LayerMask interactable;
     GameObject npc;
+    public GameObject settings;
     void Start()
     {
-        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
-        UnityEngine.Cursor.visible = !UnityEngine.Cursor.visible;
+        LockMouse(true);
     }
 
     void Update()
@@ -81,25 +81,43 @@ public class movement : MonoBehaviour
                 npc.SendMessage("qOption");
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause(Time.timeScale != 0);
+            
+        }
     }
-    public void BeStill()
+    public void LockMouse(bool locked)
     {
-        canLook = false;
-        canMove = false;  
+        if (locked)
+        {
+            UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+            UnityEngine.Cursor.visible = false;
+        }
+        else
+        {
+            UnityEngine.Cursor.lockState = CursorLockMode.None; 
+            UnityEngine.Cursor.visible = true;
+        }
     }
-    public void EnableMovement()
+    public void BeStill(bool still)
     {
-        canLook = true;
-        canMove = true;
+        canLook = !still;
+        canMove = !still;  
     }
-    public void Pause()
+
+    public void Pause(bool PauseON)
     {
-        Time.timeScale = 0;
+        LockMouse(!PauseON);
+        BeStill(PauseON);
+        if (PauseON)
+        {
+            Time.timeScale = 0;
+        }
+        else { Time.timeScale = 1; }
+        settings.SetActive(PauseON);
     }
-    public void Play()
-    {
-        Time.timeScale = 1;
-    }
+
     IEnumerator attack(float seconds) //the more contact made with enemy the more damage that will be done
     {
         attacking = true;
