@@ -194,31 +194,9 @@ MonoBehaviour:
       - rid: 2473036551162691608
       - rid: 2473036551162691609
       - rid: 2473036551162691610
+      - rid: 5005369044699971584
     m_RuntimeSettings:
-      m_List:
-      - rid: 8556427327610290176
-      - rid: 8556427327610290178
-      - rid: 8556427327610290180
-      - rid: 2473036551162691584
-      - rid: 2473036551162691585
-      - rid: 2473036551162691586
-      - rid: 2473036551162691587
-      - rid: 2473036551162691588
-      - rid: 2473036551162691589
-      - rid: 2473036551162691592
-      - rid: 2473036551162691593
-      - rid: 2473036551162691594
-      - rid: 2473036551162691595
-      - rid: 2473036551162691597
-      - rid: 2473036551162691598
-      - rid: 2473036551162691599
-      - rid: 2473036551162691601
-      - rid: 2473036551162691602
-      - rid: 2473036551162691605
-      - rid: 2473036551162691606
-      - rid: 2473036551162691608
-      - rid: 2473036551162691609
-      - rid: 2473036551162691610
+      m_List: []
   renderingLayerNames:
   - Light Layer default
   - Light Layer 1
@@ -704,6 +682,10 @@ MonoBehaviour:
       data:
         m_Version: 0
         m_CoreCopyPS: {fileID: 4800000, guid: 12dc59547ea167a4ab435097dd0f9add, type: 3}
+    - rid: 5005369044699971584
+      type: {class: RenderingDebuggerRuntimeResources, ns: UnityEngine.Rendering, asm: Unity.RenderPipelines.Core.Runtime}
+      data:
+        m_version: 0
     - rid: 8556427327610290176
       type: {class: HDRenderPipelineRuntimeAssets, ns: UnityEngine.Rendering.HighDefinition, asm: Unity.RenderPipelines.HighDefinition.Runtime}
       data:
