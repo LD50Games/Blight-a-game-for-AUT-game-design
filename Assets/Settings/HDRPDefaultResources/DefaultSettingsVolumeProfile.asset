@@ -39,7 +39,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2384dbf2c1c420f45a792fbc315fbfb1, type: 2}
     - {fileID: 11400000, guid: 39f176c5009468e419be8fba2d8a9405, type: 2}
     - {fileID: 11400000, guid: fca015aaae9124f45b9c615f7194d019, type: 2}
-    - {fileID: 11400000, guid: 15d36b92d741dfa48b7774da7a63137d, type: 2}
+    - {fileID: 11400000, guid: 1bf836fbdd6f45840a54450778c4ad50, type: 2}
 --- !u!114 &-8081821874002754358
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -293,6 +293,11 @@ MonoBehaviour:
   m_RayMaxIterationsRT:
     m_OverrideState: 1
     m_Value: 48
+  adaptiveProbeVolumesLayerMask:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 0
+      m_Bits: 1
 --- !u!114 &-7089757308646879465
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -557,6 +562,21 @@ MonoBehaviour:
   maximumIntensity:
     m_OverrideState: 1
     m_Value: 10
+  denoising:
+    m_OverrideState: 0
+    m_Value: 0
+  useAOVs:
+    m_OverrideState: 0
+    m_Value: 1
+  temporal:
+    m_OverrideState: 0
+    m_Value: 0
+  separateVolumetrics:
+    m_OverrideState: 0
+    m_Value: 0
+  asyncDenoising:
+    m_OverrideState: 0
+    m_Value: 1
   skyImportanceSampling:
     m_OverrideState: 1
     m_Value: 0
