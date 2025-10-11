@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using static UnityEngine.UI.Image;
 
@@ -8,7 +9,6 @@ public class movement : MonoBehaviour
 {
     public GameObject playerCamera;
     public Rigidbody rb;
-    //public Animator animator;
     public float _speed = 9f;
     private Vector2 _input;
     public float lookSpeed = 2f;
@@ -17,7 +17,8 @@ public class movement : MonoBehaviour
     public Animator animator;
     float rotationX = 0;
     bool attacking = false;
-
+    public int health;
+    public bool in_combat = false;
     public bool canMove = true;
     public bool canLook = true;
 
@@ -27,6 +28,7 @@ public class movement : MonoBehaviour
     public LayerMask interactable;
     GameObject npc;
     public GameObject settings;
+    public SkinnedMeshRenderer HealthBar;
     void Start()
     {
         LockMouse(true);
@@ -34,6 +36,18 @@ public class movement : MonoBehaviour
 
     void Update()
     {
+        HealthBar.SetBlendShapeWeight(0, 100 - health );
+        if(health > 1)
+        {
+            if (in_combat = false && health < 100) 
+            {
+                health += 1;
+            }
+        }
+        else
+        {
+            die();
+        }
         animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"), rb.linearVelocity.magnitude * Input.GetAxis("Vertical"), Time.deltaTime * 2f)); //sets the animator to negitive if s is pressed
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
@@ -134,6 +148,10 @@ public class movement : MonoBehaviour
         yield return new WaitForSeconds(seconds *0.1f);
         canMove = true;
         attacking = false;
+    }
+    public void die()
+    {
+        SceneManager.LoadScene("YouDied");
     }
     public void CollisionCheck(Transform orgin_) 
     {

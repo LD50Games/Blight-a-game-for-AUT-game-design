@@ -8,6 +8,7 @@ public class phlegm : MonoBehaviour
     [Header("Ai control panel")]
     public Transform destination;
     public NavMeshAgent agent;
+    public Rigidbody rb;
 
     [Header("Presentaiton asignments")]
     public Animator animator;
@@ -31,12 +32,22 @@ public class phlegm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-       
-        animator.SetFloat("walking", agent.velocity.sqrMagnitude);
-        
-        agent.SetDestination(agent_target.transform.position);
 
+        animator.SetFloat("walking", agent.velocity.sqrMagnitude);
+
+        if (Vector3.Distance(player.transform.position, transform.position) < 2)
+        {
+            rb.isKinematic = false;
+            agent.enabled = false;
+        }
+        else { 
+            rb.isKinematic = true;
+            agent.enabled = true;
+            
+
+            agent.SetDestination(agent_target.transform.position);
+        }
+        
     }
     
 }

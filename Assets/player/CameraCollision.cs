@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+
 using UnityEngine;
 using static UnityEngine.UI.Image;
 
@@ -19,7 +19,7 @@ public class CameraCollision : MonoBehaviour
         }
         else
         {
-            Camera.position = CameraEnd.position;
+            Camera.position = Vector3.Lerp(Camera.position, CameraEnd.position, 2 * Time.deltaTime);
         }
     }
 }
