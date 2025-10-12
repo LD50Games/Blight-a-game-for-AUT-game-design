@@ -296,7 +296,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 48
   adaptiveProbeVolumesLayerMask:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       serializedVersion: 0
       m_Bits: 1
@@ -565,19 +565,19 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 10
   denoising:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   useAOVs:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   temporal:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   separateVolumetrics:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   asyncDenoising:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   skyImportanceSampling:
     m_OverrideState: 1
