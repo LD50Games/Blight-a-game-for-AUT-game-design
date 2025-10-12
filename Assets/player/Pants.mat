@@ -213,7 +213,7 @@ Material:
     - _MetallicRemapMin: 0
     - _Mode: 0
     - _NormalMapSpace: 0
-    - _NormalScale: 1
+    - _NormalScale: 2.17
     - _ObjectSpaceUVMapping: 0
     - _ObjectSpaceUVMappingEmissive: 0
     - _OcclusionStrength: 1
@@ -272,8 +272,8 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.335849, g: 0.335849, b: 0.335849, a: 1}
-    - _Color: {r: 0.33584896, g: 0.33584896, b: 0.33584896, a: 1}
+    - _BaseColor: {r: 0.5018867, g: 0.5018867, b: 0.5018867, a: 1}
+    - _Color: {r: 0.50188667, g: 0.50188667, b: 0.50188667, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

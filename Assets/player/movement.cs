@@ -162,6 +162,10 @@ public class movement : MonoBehaviour
             hit.SendMessage("TakeDamage",1);
             }
     }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
     private void FixedUpdate()
     {
         _input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //Gets the movement vector from inputs

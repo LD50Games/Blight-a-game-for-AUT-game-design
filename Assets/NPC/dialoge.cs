@@ -28,8 +28,7 @@ public class DialogeClusters
     int DialogeNumber;
     int DialogeClusterNumber;
     public TextMeshProUGUI text;
-    public UnityEvent function;
-    bool InOptionMode = false;
+    public UnityEvent function;    bool InOptionMode = false;
 
     public void interact()
     {
@@ -85,6 +84,10 @@ public class DialogeClusters
         DialogeNumber = 0;
         player.SendMessage("BeStill",false);
         text.enabled = false;
+    }
+    public void set(int dialoge_set)
+    {
+        DialogeClusterNumber = dialoge_set;
     }
     public void qOption()
     {

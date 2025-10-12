@@ -1,15 +1,24 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+
+    [Header("Combat")]
     public int health;
+    public bool in_combat = false;
+    public Transform MaceHead;
+    bool attacking = false;
+    public LayerMask enemies;
+    public GameObject source;
+
     [Header("Ai control panel")]
     public Transform destination;
     public NavMeshAgent agent;
     public Rigidbody rb;
-
+    
     [Header("Presentaiton asignments")]
     public Animator animator;
 
@@ -20,9 +29,8 @@ public class EnemyAI : MonoBehaviour
 
 
     GameObject agent_target;
-    public bool in_combat = false;
-    [Header("Hide Positions")]
-    public List<Transform> hidepositions = new List<Transform>();
+    
+    
     void Start()
     {
         agent_target = player;
@@ -38,12 +46,18 @@ public class EnemyAI : MonoBehaviour
         {
             rb.isKinematic = false;
             agent.enabled = false;
+            
+            if (!attacking)
+            {
+                StartCoroutine(attack(1.6f));
+                animator.SetTrigger("SlashDown");
+            }
         }
         else
         {
             rb.isKinematic = true;
             agent.enabled = true;
-            
+
 
             agent.SetDestination(agent_target.transform.position);
         }
@@ -51,8 +65,39 @@ public class EnemyAI : MonoBehaviour
     }
 
 
-public void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
+        if (health < 0)
+        {
+            die();
+        }
+    }
+    public void CollisionCheck(Transform orgin_)
+    {
+        Collider[] hits = Physics.OverlapSphere(orgin_.position, 0.6f, enemies);
+
+        foreach (Collider hit in hits)
+        {
+            hit.SendMessage("TakeDamage", 4);
+        }
+    }
+    public void die()
+    {
+        Destroy(source);
+    }
+    IEnumerator attack(float seconds)
+    {
+        attacking = true;
+
+        yield return new WaitForSeconds(seconds * 1f);
+        CollisionCheck(MaceHead);
+        yield return new WaitForSeconds(seconds * 0.2f);
+        CollisionCheck(MaceHead);
+        yield return new WaitForSeconds(seconds * 0.1f);
+        CollisionCheck(MaceHead);
+        yield return new WaitForSeconds(seconds * 0.1f);
+        yield return new WaitForSeconds(seconds * 2f);
+        attacking = false;
     }
 }
