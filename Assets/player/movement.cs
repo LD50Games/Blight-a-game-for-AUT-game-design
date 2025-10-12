@@ -29,6 +29,7 @@ public class movement : MonoBehaviour
     GameObject npc;
     public GameObject settings;
     public SkinnedMeshRenderer HealthBar;
+    private Coroutine attackCoroutine;
     void Start()
     {
         LockMouse(true);
@@ -69,12 +70,12 @@ public class movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && attacking == false && canLook == true)
         {
             animator.SetTrigger("MidSlash");
-            StartCoroutine(attack(1.6f));
+            attackCoroutine = StartCoroutine(attack(1.6f));
         }
         if (Input.GetKeyDown(KeyCode.Mouse1) && attacking == false && canLook == true)
         {
             animator.SetTrigger("Poke");
-            StartCoroutine(attack(1.4f));
+            attackCoroutine = StartCoroutine(attack(1.4f));
         }
         if (Input.GetKeyDown(KeyCode.E) && attacking == false)
         {
@@ -165,6 +166,21 @@ public class movement : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        animator.SetTrigger("hit");
+        StartCoroutine(hit());
+    }
+    IEnumerator hit()
+    {
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+            attackCoroutine = null;
+        }
+
+        attacking = true;
+        yield return new WaitForSeconds(2f);
+        attacking = false;
+
     }
     private void FixedUpdate()
     {

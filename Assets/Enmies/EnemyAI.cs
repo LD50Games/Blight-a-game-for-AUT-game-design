@@ -29,8 +29,8 @@ public class EnemyAI : MonoBehaviour
 
 
     GameObject agent_target;
-    
-    
+    private Coroutine attackCoroutine;
+
     void Start()
     {
         agent_target = player;
@@ -49,10 +49,14 @@ public class EnemyAI : MonoBehaviour
             
             if (!attacking)
             {
-                StartCoroutine(attack(1.6f));
+                
                 animator.SetTrigger("SlashDown");
+
+                attackCoroutine = StartCoroutine(attack(1.6f));
+
             }
         }
+        
         else
         {
             rb.isKinematic = true;
@@ -72,6 +76,8 @@ public class EnemyAI : MonoBehaviour
         {
             die();
         }
+        animator.SetTrigger("hit");
+        StartCoroutine(hit());
     }
     public void CollisionCheck(Transform orgin_)
     {
@@ -86,7 +92,7 @@ public class EnemyAI : MonoBehaviour
     {
         Destroy(source);
     }
-    IEnumerator attack(float seconds)
+    public IEnumerator attack(float seconds)
     {
         attacking = true;
 
@@ -99,5 +105,18 @@ public class EnemyAI : MonoBehaviour
         yield return new WaitForSeconds(seconds * 0.1f);
         yield return new WaitForSeconds(seconds * 2f);
         attacking = false;
+    }
+    IEnumerator hit()
+    {
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+            attackCoroutine = null;
+        }
+
+        attacking = true ;
+        yield return new WaitForSeconds(2f);
+        attacking = false ;
+
     }
 }
