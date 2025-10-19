@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -11,9 +13,10 @@ public class EnemyAI : MonoBehaviour
     public bool in_combat = false;
     public Transform MaceHead;
     bool attacking = false;
+    bool inMotion = false;
     public LayerMask enemies;
     public GameObject source;
-
+    public Collider collider_;
     [Header("Ai control panel")]
     public Transform destination;
     public NavMeshAgent agent;
@@ -26,7 +29,7 @@ public class EnemyAI : MonoBehaviour
     [Header("External asigned objects")]
 
     public GameObject player;
-
+    public GameObject phlegm;
 
     GameObject agent_target;
     private Coroutine attackCoroutine;
@@ -34,20 +37,22 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent_target = player;
+        phlegm.SendMessage("hide");
     }
 
     // Update is called once per frame
     void Update()
     {
-
         animator.SetFloat("Speed", agent.velocity.sqrMagnitude);
 
-        if (Vector3.Distance(player.transform.position, transform.position) < 1.5)
+        if (Vector3.Distance(player.transform.position, transform.position) < 1.7 && !attacking && health > 0)
         {
             rb.isKinematic = false;
             agent.enabled = false;
-            
-            if (!attacking)
+
+            bool attackRandomiser = Random.value > 0.5f;
+
+            if (attackRandomiser)
             {
                 
                 animator.SetTrigger("SlashDown");
@@ -55,15 +60,26 @@ public class EnemyAI : MonoBehaviour
                 attackCoroutine = StartCoroutine(attack(1.6f));
 
             }
+            else 
+            {
+
+                animator.SetTrigger("MidSlash");
+
+                attackCoroutine = StartCoroutine(attack(0.9f));
+
+            }
         }
         
         else
         {
-            rb.isKinematic = true;
-            agent.enabled = true;
+            if (health > 0)
+            {
+                rb.isKinematic = true;
+                agent.enabled = true;
 
 
-            agent.SetDestination(agent_target.transform.position);
+                agent.SetDestination(agent_target.transform.position);
+            }
         }
 
     }
@@ -76,7 +92,6 @@ public class EnemyAI : MonoBehaviour
         {
             die();
         }
-        animator.SetTrigger("hit");
         StartCoroutine(hit());
     }
     public void CollisionCheck(Transform orgin_)
@@ -90,13 +105,26 @@ public class EnemyAI : MonoBehaviour
     }
     public void die()
     {
-        Destroy(source);
+        animator.SetTrigger("Dead");
+        rb.isKinematic = true ;
+        collider_.enabled = false;
+        agent.enabled = false;
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+            }
+        this.enabled = false;
+
     }
     public IEnumerator attack(float seconds)
     {
         attacking = true;
-
-        yield return new WaitForSeconds(seconds * 1f);
+        yield return new WaitForSeconds(seconds * 0.7f);
+        inMotion = true;
+        rb.isKinematic = true;
+        agent.enabled = true;
+        yield return new WaitForSeconds(seconds *0.6f);
+        
         CollisionCheck(MaceHead);
         yield return new WaitForSeconds(seconds * 0.2f);
         CollisionCheck(MaceHead);
@@ -104,13 +132,17 @@ public class EnemyAI : MonoBehaviour
         CollisionCheck(MaceHead);
         yield return new WaitForSeconds(seconds * 0.1f);
         yield return new WaitForSeconds(seconds * 2f);
+        inMotion = false;
         attacking = false;
+        rb.isKinematic = false;
+        agent.enabled = false;
     }
     IEnumerator hit()
     {
-        if (attackCoroutine != null)
+        if (attackCoroutine != null && inMotion == false)
         {
             StopCoroutine(attackCoroutine);
+            animator.SetTrigger("hit");
             attackCoroutine = null;
         }
 

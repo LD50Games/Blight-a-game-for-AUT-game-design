@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: f1be6f2d946458d43ac30e5d39c99d3f
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 24200
   internalIDToNameTable: []
   externalObjects:
   - first:
@@ -125,7 +125,7 @@ ModelImporter:
       takeName: Actor_Hunter_FW|Actor_Hunter_FW|MC1_Hunter_Blight_Take001_mcp|Base
         Layer.002
       internalID: 8595890016840005033
-      firstFrame: 300
+      firstFrame: 312
       lastFrame: 439
       wrapMode: 0
       orientationOffsetY: 0
@@ -215,7 +215,7 @@ ModelImporter:
       takeName: Actor_Hunter_FW|Actor_Hunter_FW|MC1_Hunter_Blight_Take001_mcp|Base
         Layer.002
       internalID: -61935010138953979
-      firstFrame: 500
+      firstFrame: 512
       lastFrame: 608
       wrapMode: 0
       orientationOffsetY: 0
@@ -245,7 +245,7 @@ ModelImporter:
       takeName: Actor_Hunter_FW|Actor_Hunter_FW|MC1_Hunter_Blight_Take001_mcp|Base
         Layer.002
       internalID: 655148808346065263
-      firstFrame: 700
+      firstFrame: 712
       lastFrame: 835
       wrapMode: 0
       orientationOffsetY: 0
@@ -275,7 +275,7 @@ ModelImporter:
       takeName: Actor_Hunter_FW|Actor_Hunter_FW|MC1_Hunter_Blight_Take001_mcp|Base
         Layer.002
       internalID: 5830040508204914451
-      firstFrame: 900
+      firstFrame: 912
       lastFrame: 1040
       wrapMode: 0
       orientationOffsetY: 0
@@ -305,7 +305,7 @@ ModelImporter:
       takeName: Actor_Hunter_FW|Actor_Hunter_FW|MC1_Hunter_Blight_Take001_mcp|Base
         Layer.002
       internalID: 7443709010292407147
-      firstFrame: 1100
+      firstFrame: 1112
       lastFrame: 1195
       wrapMode: 0
       orientationOffsetY: 0
@@ -335,7 +335,7 @@ ModelImporter:
       takeName: Actor_Hunter_FW|Actor_Hunter_FW|MC1_Hunter_Blight_Take001_mcp|Base
         Layer.002
       internalID: -3068144514586009974
-      firstFrame: 1300
+      firstFrame: 1312
       lastFrame: 1425
       wrapMode: 0
       orientationOffsetY: 0
@@ -566,6 +566,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8

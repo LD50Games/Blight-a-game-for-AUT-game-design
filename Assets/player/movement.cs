@@ -9,7 +9,7 @@ public class movement : MonoBehaviour
 {
     public GameObject playerCamera;
     public Rigidbody rb;
-    public float _speed = 9f;
+    public float _speed = 7f;
     private Vector2 _input;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
@@ -21,7 +21,8 @@ public class movement : MonoBehaviour
     public bool in_combat = false;
     public bool canMove = true;
     public bool canLook = true;
-
+    public GameObject Camera;
+    public GameObject PressE;
     public Transform SwordTip;
     public Transform SwordEdge;
     public LayerMask enemies;
@@ -30,6 +31,7 @@ public class movement : MonoBehaviour
     public GameObject settings;
     public SkinnedMeshRenderer HealthBar;
     private Coroutine attackCoroutine;
+    public GameObject blood;
     void Start()
     {
         LockMouse(true);
@@ -77,18 +79,25 @@ public class movement : MonoBehaviour
             animator.SetTrigger("Poke");
             attackCoroutine = StartCoroutine(attack(1.4f));
         }
-        if (Input.GetKeyDown(KeyCode.E) && attacking == false)
+        if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out RaycastHit hit, 4f, interactable) && canLook == true && canLook == true)
         {
-            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 6f, interactable) && canLook == true)
+            PressE.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E) && attacking == false)
             {
                 hit.collider.gameObject.SendMessage("interact");
                 npc = hit.collider.gameObject;
-            }
-            if (canLook == false)
-            {
-                npc.SendMessage("next");
+                
             }
         }
+        else
+        {
+            PressE.SetActive(false);
+        }
+        if (canLook == false && Input.GetKeyDown(KeyCode.E)) {
+            npc.SendMessage("next");
+        }
+
         if (Input.GetKeyDown(KeyCode.Q) && attacking == false)
         {
             if (canLook == false)
@@ -140,7 +149,10 @@ public class movement : MonoBehaviour
         yield return new WaitForSeconds(seconds*0.2f);
         CollisionCheck(SwordTip);
         CollisionCheck(SwordEdge);
-        yield return new WaitForSeconds(seconds *0.2f);
+        yield return new WaitForSeconds(seconds *0.1f);
+        CollisionCheck(SwordTip);
+        CollisionCheck(SwordEdge);
+        yield return new WaitForSeconds(seconds * 0.1f);
         CollisionCheck(SwordTip);
         CollisionCheck(SwordEdge);
         yield return new WaitForSeconds(seconds * 0.1f);
@@ -160,7 +172,8 @@ public class movement : MonoBehaviour
 
         foreach (Collider hit in hits)
             {
-            hit.SendMessage("TakeDamage",1);
+            hit.SendMessage("TakeDamage",2);
+            Instantiate(blood, hit.transform.position, transform.rotation);
             }
     }
     public void TakeDamage(int damage)
@@ -168,7 +181,7 @@ public class movement : MonoBehaviour
         health -= damage;
         animator.SetTrigger("hit");
         StartCoroutine(hit());
-    }
+    } 
     IEnumerator hit()
     {
         if (attackCoroutine != null)
@@ -178,7 +191,8 @@ public class movement : MonoBehaviour
         }
 
         attacking = true;
-        yield return new WaitForSeconds(2f);
+        canMove = true;
+        yield return new WaitForSeconds(0.6f);
         attacking = false;
 
     }
@@ -190,16 +204,16 @@ public class movement : MonoBehaviour
         {
             //Movement
             _movementVector = _input.x * transform.right * _speed + _input.y * transform.forward * _speed;
-            float t = 1 * Time.deltaTime; 
+            float t = 1.9f * Time.deltaTime; 
             rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, new Vector3(_movementVector.x, rb.linearVelocity.y, _movementVector.z), t); //Applies the movement using a Lerp 
 
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W)) //Sets the running speed
             {
-                _speed = 13;
+                _speed = 12;
             }
             else
             {
-                _speed = 9;
+                _speed = 7;
             }
         }
     }

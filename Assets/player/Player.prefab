@@ -283,6 +283,7 @@ Transform:
   - {fileID: 5644045250299213526}
   - {fileID: 5512066131764885931}
   - {fileID: 4912946632781068940}
+  - {fileID: 1196607115941979111}
   m_Father: {fileID: 7519175326904371317}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &3654080396456536035
@@ -585,12 +586,12 @@ Transform:
   m_GameObject: {fileID: 942759189347588296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.483, z: 0}
+  m_LocalPosition: {x: 0, y: 0.48300004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8455575641101518148}
-  - {fileID: 1196607115941979111}
+  - {fileID: 1593691972859810427}
   m_Father: {fileID: 7519175326904371317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &90933274133011884
@@ -631,13 +632,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008074826224393125}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.043619405, z: -0, w: 0.9990483}
-  m_LocalPosition: {x: 0.44200003, y: 0.30799988, z: -1.44}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.44200003, y: 1.935, z: 1.4399996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8654258084077666079}
-  m_Father: {fileID: 5612967479889524550}
+  m_Father: {fileID: 8560178433018118999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227699290377370022
 GameObject:
@@ -1473,6 +1474,51 @@ Transform:
   - {fileID: 4439282221697101203}
   m_Father: {fileID: 8624327491479365803}
   m_LocalEulerAnglesHint: {x: 3.170006, y: 0.61836094, z: 81.93842}
+--- !u!1 &3676804084713115160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593691972859810427}
+  - component: {fileID: 5423453740567596340}
+  m_Layer: 6
+  m_Name: CameraHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1593691972859810427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3676804084713115160}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.44200003, y: 0.30799985, z: -1.4399996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5612967479889524550}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5423453740567596340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3676804084713115160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b0ffa487a39dd4cbcf5ded535e3ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  object_: {fileID: 0}
 --- !u!1 &3881525212444460652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3165,7 +3211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6437317744789075530}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.043619405, z: -0, w: 0.9990483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.478, y: 0.30799988, z: -1.856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3551,8 +3597,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7476887607546642820}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.309}
+  m_LocalRotation: {x: -0, y: -0.043619405, z: -0, w: 0.9990483}
+  m_LocalPosition: {x: -0.026931137, y: 0, z: 0.30782318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4195,6 +4241,8 @@ MonoBehaviour:
   in_combat: 0
   canMove: 1
   canLook: 1
+  Camera: {fileID: 0}
+  PressE: {fileID: 0}
   SwordTip: {fileID: 1720635957848543003}
   SwordEdge: {fileID: 7063394344479257461}
   enemies:
@@ -4205,6 +4253,7 @@ MonoBehaviour:
     m_Bits: 8
   settings: {fileID: 0}
   HealthBar: {fileID: 5516327825796389254}
+  blood: {fileID: 0}
 --- !u!136 &5675170715091595263
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4224,7 +4273,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

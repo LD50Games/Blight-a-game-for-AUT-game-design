@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class phlegm : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class phlegm : MonoBehaviour
     public bool in_combat = false;
     public int health;
     [Header("Hide Positions")]
-    public List<Transform> hidepositions = new List<Transform>();
+    public List<GameObject> hidepositions = new List<GameObject>();
     void Start()
     {
         agent_target = player;
@@ -39,6 +40,7 @@ public class phlegm : MonoBehaviour
         {
             rb.isKinematic = false;
             agent.enabled = false;
+            agent_target = player;
         }
         else { 
             rb.isKinematic = true;
@@ -49,5 +51,23 @@ public class phlegm : MonoBehaviour
         }
         
     }
-    
+    public void hide()
+    {
+        float distance_ = 10000000;
+        foreach (GameObject t in hidepositions)
+        {
+            float distance = Vector3.Distance(t.transform.position, transform.position);
+            if (distance < distance_)
+            {
+                distance_ = distance;
+                agent_target = t;
+                
+            }
+            print(distance_);
+        }
+    }
+    public void Follow()
+    {
+        agent_target = player;
+    }
 }

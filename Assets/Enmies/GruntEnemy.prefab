@@ -966,7 +966,6 @@ GameObject:
   - component: {fileID: 6646580784314871063}
   - component: {fileID: 6598449376995928428}
   - component: {fileID: 2848245422626357037}
-  - component: {fileID: 4659403812608729188}
   m_Layer: 7
   m_Name: EarMask (1)
   m_TagString: Untagged
@@ -1025,39 +1024,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089e246846093fb4c863219f0ab500fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  health: 10
+  health: 45
   in_combat: 0
   MaceHead: {fileID: 6237005709049397}
   enemies:
     serializedVersion: 2
     m_Bits: 64
   source: {fileID: 9073995181197707846}
+  collider_: {fileID: 2985218283033494711}
   destination: {fileID: 0}
   agent: {fileID: 171189077678355199}
   rb: {fileID: 5380049248348025833}
   animator: {fileID: 6598449376995928428}
   player: {fileID: 0}
---- !u!65 &4659403812608729188
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2723626589234555073}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.40235353, y: 0.8926663, z: 0.25352573}
-  m_Center: {x: -0.071199894, y: 1.3442068, z: -0.08547592}
 --- !u!1 &2812673040742967845
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,7 +3832,8 @@ GameObject:
   - component: {fileID: 171189077678355199}
   - component: {fileID: 2985218283033494711}
   - component: {fileID: 5380049248348025833}
-  m_Layer: 0
+  - component: {fileID: 1848473322218583654}
+  m_Layer: 9
   m_Name: GruntEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3886,11 +3866,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.32
-  m_Speed: 1.2
-  m_Acceleration: 0.4
+  m_Speed: 1.8
+  m_Acceleration: 0.6
   avoidancePriority: 50
-  m_AngularSpeed: 40
-  m_StoppingDistance: 1
+  m_AngularSpeed: 90
+  m_StoppingDistance: 1.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -3929,7 +3909,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9073995181197707846}
   serializedVersion: 5
-  m_Mass: 69
+  m_Mass: 30
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3948,3 +3928,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1848473322218583654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9073995181197707846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b872ecdb2908498f1956991dec16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageReciver
+  enemyContoller: {fileID: 2723626589234555073}
+  healthMultipleir: 1
