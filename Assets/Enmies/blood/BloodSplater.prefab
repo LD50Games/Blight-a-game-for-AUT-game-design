@@ -126,7 +126,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7692094ea8d7dd74da07aacb946d56a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
-  lockX: 0
-  lockY: 0
-  lockZ: 0

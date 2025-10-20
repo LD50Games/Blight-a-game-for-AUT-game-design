@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a9cca6b0064a324aa00ee45034f6cbc
-      internalID: 734472235
+      spriteID: dc99b7497901b07499cfca558bd70b25
+      internalID: 1110365643
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9aad748c5d360f42a72e147e845c635
-      internalID: -1911706870
+      spriteID: 69a0b2167cb92b94b9afc3396a6c10f6
+      internalID: 1659685024
       vertices: []
       indices: 
       edges: []
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c7bb8e6b8f5cdf4e98f488ccd9491ad
-      internalID: -1399516037
+      spriteID: e926d7fba8fbc9d4382c0b9858f18969
+      internalID: 1936505366
       vertices: []
       indices: 
       edges: []
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f7c467125d0a1147b209223a4a12226
-      internalID: -1573824315
+      spriteID: 98fb878a404316047ba2d6383080f6f8
+      internalID: 1701304833
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 926e4fe942b7a154da477b0f0ceaa476
-      internalID: 474978384
+      spriteID: 5a4a8e5f2ce908d4c8495cc15f4e9dcb
+      internalID: -1457705670
       vertices: []
       indices: 
       edges: []
@@ -222,8 +222,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef5958ad766b8b546aa2f69312416988
-      internalID: -1691923698
+      spriteID: 70f9367011e3d1747ad0d14ad9962d0f
+      internalID: -575740484
       vertices: []
       indices: 
       edges: []
@@ -244,8 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af385a6ba7abd974f9d3de65fe3d4b4f
-      internalID: 1906526500
+      spriteID: 30200bb1b1b69ca47a38f2b4fcf1f30e
+      internalID: 1631711840
       vertices: []
       indices: 
       edges: []
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8190d997663e4344cb1384be86cbdc1a
-      internalID: -1482513318
+      spriteID: da2488f6efe887c4ca71d7e3e486cafd
+      internalID: 1633512437
       vertices: []
       indices: 
       edges: []
@@ -276,8 +276,8 @@ TextureImporter:
       name: ButTheEvilKing_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 772
+        x: 2052
+        y: 1158
         width: 1026
         height: 386
       alignment: 0
@@ -288,8 +288,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8e02b7c6fa57754291147f59bbb50cf
-      internalID: 1531644359
+      spriteID: 61d4e474361eeb54fa0d3b479e59a6dd
+      internalID: -1594484713
       vertices: []
       indices: 
       edges: []
@@ -298,6 +298,28 @@ TextureImporter:
       name: ButTheEvilKing_9
       rect:
         serializedVersion: 2
+        x: 0
+        y: 772
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297e3ddc5f211f94794bfd1124bea41c
+      internalID: 1914979446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButTheEvilKing_10
+      rect:
+        serializedVersion: 2
         x: 1026
         y: 772
         width: 1026
@@ -310,30 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72580396fcca5034fa9e7b2421dbb740
-      internalID: 1691692445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButTheEvilKing_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 386
-        width: 1026
-        height: 386
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 495f14b14816ce944ac12004417e446a
-      internalID: 292589120
+      spriteID: a12a8810fc949134d8b9ce4919869e26
+      internalID: -1879590923
       vertices: []
       indices: 
       edges: []
@@ -342,8 +342,8 @@ TextureImporter:
       name: ButTheEvilKing_11
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 386
+        x: 2052
+        y: 772
         width: 1026
         height: 386
       alignment: 0
@@ -354,8 +354,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8849a2fd56d4b004e9447436cb441c79
-      internalID: -1075320073
+      spriteID: c3f2a3fb63bc9624bb3ebe2cf491ae99
+      internalID: -1374054022
       vertices: []
       indices: 
       edges: []
@@ -365,6 +365,50 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 386
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f56e631191e94547be08eba6d6e99a8
+      internalID: -504539816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButTheEvilKing_13
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 386
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208164484ea1fc744a0f8f17f7be1154
+      internalID: 2039815973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButTheEvilKing_14
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 1026
         height: 386
@@ -376,14 +420,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dba58769dc804a14e94490fbce9a5414
-      internalID: -1773693058
+      spriteID: 309ab369771a2114fbf10f8b6a8dd737
+      internalID: 986599749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButTheEvilKing_13
+      name: ButTheEvilKing_15
       rect:
         serializedVersion: 2
         x: 1026
@@ -398,8 +442,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe2505d4c28f1b040984be4e9ccd59bb
-      internalID: -588007042
+      spriteID: c28af2622befb554fbef2b9669f4d616
+      internalID: 928629731
       vertices: []
       indices: 
       edges: []
@@ -408,7 +452,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4d6c24279c1bc0b4d92b010f818e641d
+    spriteID: d2c8bcbcd40cebb4bbd6a8d6eab3fdb4
     internalID: 0
     vertices: []
     indices: 
@@ -420,20 +464,22 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":6.0},"gridSpriteSize":{"x":1026.0,"y":386.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ButTheEvilKing_0: 734472235
-      ButTheEvilKing_1: -1911706870
-      ButTheEvilKing_10: 292589120
-      ButTheEvilKing_11: -1075320073
-      ButTheEvilKing_12: -1773693058
-      ButTheEvilKing_13: -588007042
-      ButTheEvilKing_2: -1399516037
-      ButTheEvilKing_3: -1573824315
-      ButTheEvilKing_4: 474978384
-      ButTheEvilKing_5: -1691923698
-      ButTheEvilKing_6: 1906526500
-      ButTheEvilKing_7: -1482513318
-      ButTheEvilKing_8: 1531644359
-      ButTheEvilKing_9: 1691692445
+      ButTheEvilKing_0: 1110365643
+      ButTheEvilKing_1: 1659685024
+      ButTheEvilKing_10: -1879590923
+      ButTheEvilKing_11: -1374054022
+      ButTheEvilKing_12: -504539816
+      ButTheEvilKing_13: 2039815973
+      ButTheEvilKing_14: 986599749
+      ButTheEvilKing_15: 928629731
+      ButTheEvilKing_2: 1936505366
+      ButTheEvilKing_3: 1701304833
+      ButTheEvilKing_4: -1457705670
+      ButTheEvilKing_5: -575740484
+      ButTheEvilKing_6: 1631711840
+      ButTheEvilKing_7: 1633512437
+      ButTheEvilKing_8: -1594484713
+      ButTheEvilKing_9: 1914979446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

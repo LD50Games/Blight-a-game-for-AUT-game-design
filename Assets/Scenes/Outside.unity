@@ -334,6 +334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4978756252774979474, guid: e4dccf2351f4d174f80ca5d6ca0117d9, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 4532851357743253890, guid: 8b743d1238eba5343838b47ef428a849, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

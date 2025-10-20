@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using static UnityEngine.UI.Image;
@@ -32,6 +33,13 @@ public class movement : MonoBehaviour
     public SkinnedMeshRenderer HealthBar;
     private Coroutine attackCoroutine;
     public GameObject blood;
+    [Header("Audio")]
+    public AudioSource speaker;
+    public AudioClip slash;
+    public AudioClip stab;
+    public AudioClip fall;
+    
+
     void Start()
     {
         LockMouse(true);
@@ -62,11 +70,16 @@ public class movement : MonoBehaviour
         {
             animator.SetTrigger("MidSlash");
             attackCoroutine = StartCoroutine(attack(1.6f));
+            speaker.clip = slash;
+            speaker.Play();
         }
         if (Input.GetKeyDown(KeyCode.Mouse1) && attacking == false && canLook == true)
         {
             animator.SetTrigger("Poke");
+
             attackCoroutine = StartCoroutine(attack(1.4f));
+            speaker.clip = stab;
+            speaker.Play();
         }
         if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out RaycastHit hit, 4f, interactable) && canLook == true && canLook == true)
         {
@@ -169,12 +182,15 @@ public class movement : MonoBehaviour
         canLook = false;
         canMove = false ;
         animator.SetTrigger("die");
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
+        speaker.clip = fall;
+        speaker.Play();
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("YouDied");
     }
     public void CollisionCheck(Transform orgin_) 
     {
-        Collider[] hits = Physics.OverlapSphere(orgin_.position, 0.25f, enemies);
+        Collider[] hits = Physics.OverlapSphere(orgin_.position, 0.35f, enemies);
 
         foreach (Collider hit in hits)
             {
@@ -190,6 +206,7 @@ public class movement : MonoBehaviour
     } 
     IEnumerator hit()
     {
+        
         if (attackCoroutine != null)
         {
             StopCoroutine(attackCoroutine);

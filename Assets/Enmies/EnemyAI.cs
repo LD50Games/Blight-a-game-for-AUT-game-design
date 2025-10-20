@@ -33,7 +33,10 @@ public class EnemyAI : MonoBehaviour
 
     GameObject agent_target;
     private Coroutine attackCoroutine;
-
+    [Header("Audio")]
+    public AudioSource speaker;
+    public AudioClip slash;
+    public AudioClip fall;
     void Start()
     {
         agent_target = player;
@@ -58,7 +61,7 @@ public class EnemyAI : MonoBehaviour
                 animator.SetTrigger("SlashDown");
 
                 attackCoroutine = StartCoroutine(attack(1.6f));
-
+                
             }
             else 
             {
@@ -66,7 +69,7 @@ public class EnemyAI : MonoBehaviour
                 animator.SetTrigger("MidSlash");
 
                 attackCoroutine = StartCoroutine(attack(0.9f));
-
+                
             }
         }
         
@@ -90,7 +93,8 @@ public class EnemyAI : MonoBehaviour
         health -= damage;
         if (health < 0)
         {
-            die();
+            StartCoroutine(die());
+            
         }
         StartCoroutine(hit());
     }
@@ -104,7 +108,7 @@ public class EnemyAI : MonoBehaviour
             Instantiate(blood, hit.transform.position, transform.rotation);
         }
     }
-    public void die()
+    public IEnumerator die()
     {
         animator.SetTrigger("Dead");
         rb.isKinematic = true ;
@@ -115,6 +119,9 @@ public class EnemyAI : MonoBehaviour
             StopCoroutine(attackCoroutine);
             }
         this.enabled = false;
+        yield return new WaitForSeconds(1f);
+        speaker.clip = fall;
+        speaker.Play();
 
     }
     public IEnumerator attack(float seconds)
@@ -125,7 +132,8 @@ public class EnemyAI : MonoBehaviour
         rb.isKinematic = true;
         agent.enabled = true;
         yield return new WaitForSeconds(seconds *0.6f);
-        
+        speaker.clip = slash;
+        speaker.Play();
         CollisionCheck(MaceHead);
         yield return new WaitForSeconds(seconds * 0.2f);
         CollisionCheck(MaceHead);
