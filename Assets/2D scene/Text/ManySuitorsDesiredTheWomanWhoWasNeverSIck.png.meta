@@ -1,0 +1,464 @@
+fileFormatVersion: 2
+guid: 7049e19f51d0f0645a0c3adb110ed7a3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1930
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59220a4c6422544ca04ca68c525f7ef
+      internalID: 511449935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_1
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1930
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70a668b75eb02f4ab36ea1ead3d8fb6
+      internalID: -1727899888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_2
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 1930
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e474ef18b6713114fb7d764d47733c71
+      internalID: -2118986630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1544
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7564910bf43564190dd5ff03b137b4
+      internalID: -549311297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_4
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1544
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25525a3ed55a94848b329b84a7d175f2
+      internalID: -501662611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_5
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 1544
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330c8305e1f2da54dba67f5c8d331813
+      internalID: -1573045904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1158
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a4703fda2a54745bcfd31ff6ba48b8
+      internalID: 1515282875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_7
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1158
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1844dcc644c7145aa3c92630bd1f5f
+      internalID: 1546430913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_8
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 1158
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a834480025aaad34fba5f164d775eeb8
+      internalID: -1570390242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 772
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec6c387a8efcf14ca418c7e3114f25a
+      internalID: -1041801444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_10
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 772
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e523b0f2879449d48a31efb87ed4751b
+      internalID: 1751232849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 386
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8327bb4b0912144a0d8463df82e6a0
+      internalID: 2085744843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_12
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 386
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2076d5c9d4738d45bc413d531fc49eb
+      internalID: 16942999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ccd63d2b109b6b47ace70c714423e5f
+      internalID: 1253798655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManySuitorsDesiredTheWomanWhoWasNeverSIck_14
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 0
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4c5b0a4711a3841a2eacc830c86e4f
+      internalID: 808700498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e03e5431bc4786246a7b042836b43138
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":6.0},"gridSpriteSize":{"x":1026.0,"y":386.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_0: 511449935
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_1: -1727899888
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_10: 1751232849
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_11: 2085744843
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_12: 16942999
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_13: 1253798655
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_14: 808700498
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_2: -2118986630
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_3: -549311297
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_4: -501662611
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_5: -1573045904
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_6: 1515282875
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_7: 1546430913
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_8: -1570390242
+      ManySuitorsDesiredTheWomanWhoWasNeverSIck_9: -1041801444
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

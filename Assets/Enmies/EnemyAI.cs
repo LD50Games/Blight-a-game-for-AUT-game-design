@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
 
 
     [Header("External asigned objects")]
-
+    public GameObject blood;
     public GameObject player;
     public GameObject phlegm;
 
@@ -101,6 +101,7 @@ public class EnemyAI : MonoBehaviour
         foreach (Collider hit in hits)
         {
             hit.SendMessage("TakeDamage", 4);
+            Instantiate(blood, hit.transform.position, transform.rotation);
         }
     }
     public void die()

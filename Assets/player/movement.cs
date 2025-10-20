@@ -39,18 +39,7 @@ public class movement : MonoBehaviour
 
     void Update()
     {
-        HealthBar.SetBlendShapeWeight(0, 100 - health );
-        if(health > 1)
-        {
-            if (in_combat = false && health < 100) 
-            {
-                health += 1;
-            }
-        }
-        else
-        {
-            die();
-        }
+        healthManager();
         animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"), rb.linearVelocity.magnitude * Input.GetAxis("Vertical"), Time.deltaTime * 2f)); //sets the animator to negitive if s is pressed
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
@@ -141,7 +130,13 @@ public class movement : MonoBehaviour
         else { Time.timeScale = 1; }
         settings.SetActive(PauseON);
     }
-
+    public void healthManager() {
+        HealthBar.SetBlendShapeWeight(0, 100 - health);
+        if (health < 1 && canLook == true)
+        {
+            StartCoroutine(die());
+        } 
+    }
     IEnumerator attack(float seconds) //the more contact made with enemy the more damage that will be done
     {
         attacking = true;
@@ -162,8 +157,19 @@ public class movement : MonoBehaviour
         canMove = true;
         attacking = false;
     }
-    public void die()
+    IEnumerator die()
     {
+        
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+            attackCoroutine = null;
+        }
+        attacking = true;
+        canLook = false;
+        canMove = false ;
+        animator.SetTrigger("die");
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene("YouDied");
     }
     public void CollisionCheck(Transform orgin_) 
@@ -204,7 +210,7 @@ public class movement : MonoBehaviour
         {
             //Movement
             _movementVector = _input.x * transform.right * _speed + _input.y * transform.forward * _speed;
-            float t = 1.9f * Time.deltaTime; 
+            float t = 1.8f * Time.deltaTime; 
             rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, new Vector3(_movementVector.x, rb.linearVelocity.y, _movementVector.z), t); //Applies the movement using a Lerp 
 
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W)) //Sets the running speed

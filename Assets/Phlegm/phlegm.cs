@@ -48,6 +48,10 @@ public class phlegm : MonoBehaviour
             
 
             agent.SetDestination(agent_target.transform.position);
+            if (Vector3.Distance(player.transform.position, transform.position) > 12)
+            {
+                agent_target = player;
+            }
         }
         
     }

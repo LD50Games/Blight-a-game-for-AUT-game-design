@@ -1036,7 +1036,9 @@ MonoBehaviour:
   agent: {fileID: 171189077678355199}
   rb: {fileID: 5380049248348025833}
   animator: {fileID: 6598449376995928428}
+  blood: {fileID: 4532851357743253890, guid: 8b743d1238eba5343838b47ef428a849, type: 3}
   player: {fileID: 0}
+  phlegm: {fileID: 0}
 --- !u!1 &2812673040742967845
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,6 @@ public class CharacterController2D : MonoBehaviour
         _input = new Vector2 (Input.GetAxis("Horizontal")*3f,0); //Gets the movement vector from inputs
         _rb.linearVelocity=_input; //applies to movement vector to the velocity 
         sprite.flipX = _input.x < 0; //determines the diection of the sprite
-        animator.SetBool("moving", _input.x != 0); //determines if the sprite is in motion
+        animator.SetFloat("Moving", Mathf.Abs(_input.x)); //determines if the sprite is in motion
     }
 }

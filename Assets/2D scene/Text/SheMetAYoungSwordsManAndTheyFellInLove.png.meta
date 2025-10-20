@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: 5b4ade6e65bd7c04b8595b6f8579d575
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1930
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944e6e638f54b6f4f9aedb63c945a2e4
+      internalID: -472205982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_1
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1930
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac58f5108f3b05439d4317e7459398b
+      internalID: 719093699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_2
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 1930
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1eeb070845b034d86090d15cb5ed58
+      internalID: 1703552142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1544
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f9697d8dd66d641854c6d8e15b3596
+      internalID: 1349463158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_4
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1544
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8e8c007b6851644b46f9fe6557f44e
+      internalID: 573034470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_5
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 1544
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344ab32543ffcfd4385e02c40cd6734a
+      internalID: -2109034268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1158
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec251a85273bc044283ae62ec67d2ff3
+      internalID: -730673582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_7
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1158
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b42337bc90e494f87e042c7b53c599
+      internalID: -1009301986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_8
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 1158
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91d784eb6a2dd04d9eae88d21208abd
+      internalID: -819799798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 772
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a42ab2dfbb805e4084510d74aef2d94
+      internalID: 113331307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_10
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 772
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198a5791e9e1afd4188e94e09d497592
+      internalID: 502977527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_11
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 772
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca717d0adef502c478b4e1af425ecc3e
+      internalID: 1046727030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 386
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a65a22fd760464ab1ef94708097afb
+      internalID: 638406702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_13
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 386
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220d28deca7ba974595b11cc0b572321
+      internalID: -2048375233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1337a60936be634eb95f7730ccf91e1
+      internalID: 1188565036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SheMetAYoungSwordsManAndTheyFellInLove_15
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 0
+        width: 1026
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec5a8f8d21b1ab42b3700e56a86707a
+      internalID: 637642606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3778c97b08c3ed44195b0e37cef4e566
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":6.0},"gridSpriteSize":{"x":1026.0,"y":386.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      SheMetAYoungSwordsManAndTheyFellInLove_0: -472205982
+      SheMetAYoungSwordsManAndTheyFellInLove_1: 719093699
+      SheMetAYoungSwordsManAndTheyFellInLove_10: 502977527
+      SheMetAYoungSwordsManAndTheyFellInLove_11: 1046727030
+      SheMetAYoungSwordsManAndTheyFellInLove_12: 638406702
+      SheMetAYoungSwordsManAndTheyFellInLove_13: -2048375233
+      SheMetAYoungSwordsManAndTheyFellInLove_14: 1188565036
+      SheMetAYoungSwordsManAndTheyFellInLove_15: 637642606
+      SheMetAYoungSwordsManAndTheyFellInLove_2: 1703552142
+      SheMetAYoungSwordsManAndTheyFellInLove_3: 1349463158
+      SheMetAYoungSwordsManAndTheyFellInLove_4: 573034470
+      SheMetAYoungSwordsManAndTheyFellInLove_5: -2109034268
+      SheMetAYoungSwordsManAndTheyFellInLove_6: -730673582
+      SheMetAYoungSwordsManAndTheyFellInLove_7: -1009301986
+      SheMetAYoungSwordsManAndTheyFellInLove_8: -819799798
+      SheMetAYoungSwordsManAndTheyFellInLove_9: 113331307
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
