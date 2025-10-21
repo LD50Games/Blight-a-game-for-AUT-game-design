@@ -291,7 +291,7 @@ AnimationClip:
   m_Events:
   - time: 2.25
     functionName: loadScene
-    data: castle
+    data: BeginingCutscene
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
