@@ -206,7 +206,10 @@ public class movement : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        animator.SetTrigger("hit");
+        if (dead == false)
+        {
+            animator.SetTrigger("hit");
+        }
         StartCoroutine(hit());
     } 
     IEnumerator hit()
