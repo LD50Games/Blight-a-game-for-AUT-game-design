@@ -33,6 +33,7 @@ public class movement : MonoBehaviour
     public SkinnedMeshRenderer HealthBar;
     private Coroutine attackCoroutine;
     public GameObject blood;
+    private bool dead =false;
     [Header("Audio")]
     public AudioSource speaker;
     public AudioClip slash;
@@ -181,7 +182,11 @@ public class movement : MonoBehaviour
         attacking = true;
         canLook = false;
         canMove = false ;
-        animator.SetTrigger("die");
+        if (dead == false)
+        {
+            animator.SetTrigger("die");
+            dead = true;
+        }
         yield return new WaitForSeconds(1f);
         speaker.clip = fall;
         speaker.Play();
