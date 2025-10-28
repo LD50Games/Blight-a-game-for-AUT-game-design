@@ -42,7 +42,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
         m_Texture: {fileID: 2800000, guid: a38d12f15f99cce419ba7e03549bdd07, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 8, y: 8}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
@@ -78,7 +78,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: a38d12f15f99cce419ba7e03549bdd07, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 8, y: 8}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
         m_Texture: {fileID: 2800000, guid: fc550c7999eca8942b854d5b0255626d, type: 3}
@@ -178,16 +178,16 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
-    - _HeightAmplitude: 40
-    - _HeightCenter: 0
+    - _HeightAmplitude: 1
+    - _HeightCenter: 0.006
     - _HeightMapParametrization: 1
     - _HeightMax: 10
     - _HeightMin: 0
-    - _HeightOffset: 0
+    - _HeightOffset: -0.6
     - _HeightPoMAmplitude: 2
-    - _HeightTessAmplitude: 4000
+    - _HeightTessAmplitude: 100
     - _HeightTessCenter: 0
-    - _InvTilingScale: 0.5
+    - _InvTilingScale: 0.125
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
@@ -230,7 +230,7 @@ Material:
     - _SupportDecals: 1
     - _SurfaceType: 0
     - _TessellationBackFaceCullEpsilon: -1
-    - _TessellationFactor: 8
+    - _TessellationFactor: 3
     - _TessellationFactorMaxDistance: 50
     - _TessellationFactorMinDistance: 20
     - _TessellationFactorTriangleSize: 10

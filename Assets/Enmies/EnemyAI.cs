@@ -148,15 +148,15 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator hit()
     {
-        if (attackCoroutine != null && inMotion == false)
+        rb.isKinematic = false;
+        if (attackCoroutine != null && inMotion == false )
         {
             StopCoroutine(attackCoroutine);
             animator.SetTrigger("hit");
             attackCoroutine = null;
         }
-
         attacking = true ;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         attacking = false ;
 
     }

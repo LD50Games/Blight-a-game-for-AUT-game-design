@@ -8,6 +8,5 @@ public class cameraHolder : MonoBehaviour
     {
         object_.transform.position = transform.position;
         object_.transform.rotation = transform.rotation;
-        
     }
 }

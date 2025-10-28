@@ -8,32 +8,43 @@ using static UnityEngine.UI.Image;
 
 public class movement : MonoBehaviour
 {
-    public GameObject playerCamera;
-    public Rigidbody rb;
-    public float _speed = 7f;
+
+    [Header("Settings")]
+    float _speed = 7f;
     private Vector2 _input;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
     private Vector3 _movementVector;
-    public Animator animator;
+    
     float rotationX = 0;
     bool attacking = false;
     public int health;
     public bool in_combat = false;
     public bool canMove = true;
     public bool canLook = true;
+   
+    
+    GameObject npc;
+    
+    
+    private Coroutine attackCoroutine;
+    
+    private bool dead =false;
+    [Header("Internal")]
+    public SkinnedMeshRenderer HealthBar;
+    public Animator animator;
     public GameObject Camera;
-    public GameObject PressE;
+    public GameObject playerCamera;
+    public Rigidbody rb;
     public Transform SwordTip;
     public Transform SwordEdge;
+    [Header("External")]
+    public GameObject blood;
+    public GameObject settings;
+    public GameObject PressE;
     public LayerMask enemies;
     public LayerMask interactable;
-    GameObject npc;
-    public GameObject settings;
-    public SkinnedMeshRenderer HealthBar;
-    private Coroutine attackCoroutine;
-    public GameObject blood;
-    private bool dead =false;
+
     [Header("Audio")]
     public AudioSource speaker;
     public AudioClip slash;
@@ -90,7 +101,6 @@ public class movement : MonoBehaviour
             {
                 hit.collider.gameObject.SendMessage("interact");
                 npc = hit.collider.gameObject;
-                
             }
         }
         else

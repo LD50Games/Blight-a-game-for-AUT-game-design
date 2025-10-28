@@ -15,11 +15,7 @@ public class blood : MonoBehaviour
 
     void Update()
     {
-
-
         transform.LookAt(Camera.main.transform.position, Vector3.up);
-                
-
         Vector3 rotation = transform.rotation.eulerAngles;
         rotation.x = originalRotation.x; 
         rotation.y = originalRotation.y; 

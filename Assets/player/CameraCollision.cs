@@ -10,9 +10,6 @@ public class CameraCollision : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-
-
-
         if (Physics.Raycast(transform.position, CameraEnd.position - transform.position, out hit, 1.537475f))
         {
             Camera.position = hit.point;
